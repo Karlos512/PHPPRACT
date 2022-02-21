@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<!-- <input type="text" name="palabra" id="palabra"> -->
+	<input type="text" name="word" id="word">
+	<button onclick="msg();">PROBAR</button>
+
+	<script type="text/javascript">
+
+		function msg() {
+		  const word = document.querySelector('#word').value; 
+		  let words = word.split(' ');
+		  let name = "";
+		  		 for(let i=0; i<=words.length-1; i++){
+		  		 	let aux = words[i];
+		  		 	let newWord = aux[0].toUpperCase() + aux.slice(1).toLowerCase();
+		  		 	name = name + " " + newWord;	
+		  		 }
+		  		 alert(name);
+		}
+
+		
+    </script>
+
+    <style type="text/css">
+    	#word{
+    		  text-transform: capitalize;
+    	}
+    </style>
+</body>
+</html>
